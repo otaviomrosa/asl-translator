@@ -4,21 +4,21 @@ DATA SIZE EXPERIMENT SUMMARY
 
 Data %     Train Size   Val Size   Val Acc %    Test Acc %   Epochs  
 --------------------------------------------------------------------------------
-10         2474         261        71.65        62.26        5       
-25         6180         675        86.22        75.00        5       
-50         12362        1361       97.80        86.13        5       
-100        24720        2735       100.00       88.83        5       
+10         2474         261        94.64        89.85        5       
+25         6180         675        99.26        94.55        5       
+50         12362        1361       99.93        95.65        5       
+100        24720        2735       100.00       98.70        5       
 
 ================================================================================
 KEY FINDINGS:
 ================================================================================
 
-1. Best Test Accuracy: 88.83% (using 100% of data)
+1. Best Test Accuracy: 98.70% (using 100% of data)
 
-2. Worst Test Accuracy: 62.26% (using 10% of data)
+2. Worst Test Accuracy: 89.85% (using 10% of data)
 
-3. Accuracy Range: 26.58%
+3. Accuracy Range: 8.85%
 
-4. Performance Drop (100% vs 10% data): 26.58%
+4. Performance Drop (100% vs 10% data): 8.85%
 
-   INSIGHT: Significant performance drop with reduced data.
+   INSIGHT: Moderate performance degradation with less data.

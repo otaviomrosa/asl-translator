@@ -2,13 +2,54 @@
 
 **Author:** Member 3 (The Scientist)
 **Experiment:** How does model performance vary with dataset size?
-**Date:** November 25, 2024
+**Original Date:** November 25, 2024
+**Updated:** November 30, 2025 (After Architectural Improvements)
+
+---
+
+## 🆕 UPDATE: NEW MODEL RESULTS (November 30, 2025)
+
+**IMPORTANT**: After teammates implemented architectural improvements (BatchNorm, Dropout, 3rd conv block), we re-ran ALL experiments. The results below are from the **ORIGINAL simpler model**. For **NEW model results**, see:
+- **`EXPERIMENT_RESULTS_RECORD.md`** - Complete analysis with NEW model
+- **`FINAL_SUMMARY.md`** - Quick reference for presentation
+
+### NEW Model Performance Summary
+
+| Experiment | OLD Model Result | NEW Model Result | Improvement |
+|------------|------------------|------------------|-------------|
+| **Data Size (100%)** | 88.83% | **98.70%** | +9.87% |
+| **Augmentation (Combined)** | 94.62% | **99.55%** | +4.93% |
+| **Small Data (10%)** | 62.26% | **89.85%** | +27.59% |
+| **Best Overall** | 94.62% | **99.55%** | +4.93% |
+
+### Key Architectural Changes
+1. ✅ 2 → 3 convolutional blocks
+2. ✅ Added BatchNormalization to all conv layers
+3. ✅ Added Dropout (0.5) to FC layers
+4. ✅ Deeper network (16/32 → 32/64/128 channels)
+5. ✅ Combined augmentation already implemented in train.py
+
+### Critical Insights from NEW Model
+- **99.55% accuracy achieved** (only 32 errors out of 7,172 test samples)
+- **Architecture > Data Quantity**: 25% data with NEW model (94.55%) beats 100% data with OLD model (88.83%)
+- **Architecture > Augmentation**: NEW model without aug (96.61%) beats OLD model with best aug (94.62%)
+- **Combined is optimal**: Architecture + augmentation = 99.55% (near-perfect)
+
+**For complete NEW model analysis, experimental details, visualizations, and talking points, refer to `EXPERIMENT_RESULTS_RECORD.md`.**
+
+---
+
+## ORIGINAL EXPERIMENT RESULTS (OLD Model - November 25, 2024)
+
+_The sections below document findings from the original simpler CNN architecture. These are kept for reference and comparison purposes._
 
 ---
 
 ## Executive Summary
 
 We trained the ASL classifier CNN on four different dataset sizes (100%, 50%, 25%, and 10% of available training data) to understand the relationship between data quantity and model performance. Our findings reveal **significant diminishing returns** after 50% of the data, suggesting opportunities for efficient deployment with reduced data requirements.
+
+**NOTE**: These results are from the ORIGINAL model. After architectural improvements, performance increased dramatically (88.83% → 98.70% for 100% data). See UPDATE section above.
 
 ---
 

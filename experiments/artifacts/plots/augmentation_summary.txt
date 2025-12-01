@@ -4,29 +4,29 @@ AUGMENTATION STUDY RESULTS
 
 Strategy        Val Acc      Test Acc     Improvement     Status
 --------------------------------------------------------------------------------
-combined         98.87%      94.62%      +4.96%        ⭐ BEST
-rotation         99.87%      92.89%      +3.23%        ✓ Excellent
-affine           96.72%      92.37%      +2.72%        ✓ Good
-baseline        100.00%      89.65%      +0.00%        (baseline)
-brightness       99.93%      88.66%      -0.99%        ✗ Worse
+combined        100.00%      99.55%      +2.94%        ⭐ BEST
+affine          100.00%      99.41%      +2.80%        ✓ Good
+rotation        100.00%      98.44%      +1.83%        ✓ Good
+baseline        100.00%      96.61%      +0.00%        (baseline)
+brightness      100.00%      96.40%      -0.21%        ✗ Worse
 
 ================================================================================
 KEY FINDINGS:
 ================================================================================
 
 1. BEST STRATEGY: COMBINED
-   - Test Accuracy: 94.62%
-   - Improvement: +4.96%
+   - Test Accuracy: 99.55%
+   - Improvement: +2.94%
 
-2. BASELINE (no augmentation): 89.65%
+2. BASELINE (no augmentation): 96.61%
 
 3. RECOMMENDATIONS:
    ✓ Use 'combined' augmentation in production
-   ✓ Augmentation provides 4.96% accuracy boost
+   ✓ Augmentation provides 2.94% accuracy boost
    ✓ This closes gap toward 95%+ target accuracy
 
 4. MEMBER 1 (ARCHITECT) ACTION ITEMS:
    → Update train.py to use 'combined' transforms
-   → Expected final model accuracy: ~94.62%
+   → Expected final model accuracy: ~99.55%
    → Code reference: experiments/augmentation_study.py:26-60
 
